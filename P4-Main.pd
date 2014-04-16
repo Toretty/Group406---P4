@@ -1,4 +1,4 @@
-#N canvas 636 44 908 810 10;
+#N canvas 723 34 908 810 10;
 #X obj 621 90 cnv 15 220 300 empty empty Routing 20 12 0 14 -204800
 -66577 0;
 #X obj 700 250 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -22,7 +22,7 @@
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -220,12 +220,12 @@ only allows a signal once \, untill "key" is lifted.;
 #X text 676 302 "4";
 #X obj 737 271 s LFO_UP;
 #X obj 134 405 r LFO_UP;
-#N canvas 1022 450 420 349 LFO_BP 0;
+#N canvas 213 665 420 349 LFO_BP 1;
 #X obj 6 -554 cnv 15 400 340 empty empty Low_frequency_Occilator_/_Band_pass
 20 12 0 14 -262130 -66577 0;
 #X floatatom 100 -269 5 0 0 0 - - -;
 #X obj 100 -403 vsl 15 128 0 20 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3175 1;
+-1 -1 0 1;
 #X obj 26 -399 +~ 1;
 #X obj 26 -378 *~ 0.5;
 #X obj 26 -420 osc~ 2;
@@ -258,7 +258,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -446,8 +446,15 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 77 0 11 0;
 #X connect 78 0 1 0;
 #X restore 175 -381 pd GradualChanger3;
+#X obj 241 -266 s toVisual1;
+#X obj 312 -377 s toVisual2;
+#X obj 37 37;
+#X obj 37 37;
+#X obj 37 37;
+#X obj 37 37;
 #X connect 1 0 21 0;
 #X connect 2 0 1 0;
+#X connect 2 0 28 0;
 #X connect 3 0 4 0;
 #X connect 4 0 13 0;
 #X connect 5 0 3 0;
@@ -462,6 +469,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 12 0 20 0;
 #X connect 13 0 12 0;
 #X connect 14 0 5 0;
+#X connect 14 0 29 0;
 #X connect 15 0 14 0;
 #X connect 19 0 15 0;
 #X connect 22 0 23 0;
@@ -1303,7 +1311,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 12 0 5 0;
 #X restore 255 217 pd mads4;
 #X obj 739 313 s Delay1;
-#N canvas 850 422 692 491 delay 0;
+#N canvas 985 655 648 314 delay 1;
 #X obj 100 19 inlet~;
 #X obj 106 187 outlet~;
 #X obj 103 79 +~;
@@ -1312,13 +1320,13 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 228 -30 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 2794 1;
 #X floatatom 238 -5 5 0 0 0 - - -;
-#N canvas 155 356 601 479 GradualChanger4 0;
+#N canvas 155 356 601 479 GradualChanger4 1;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -1514,10 +1522,11 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 206 79 *~;
 #X floatatom 270 97 5 0 0 0 - - -;
 #X obj 250 172 delwrite~ pass 2000;
-#X obj 383 -9 - 200;
 #X obj 347 27 / 900;
 #X msg 174 -32 220;
 #X obj 107 -19 loadbang;
+#X obj 383 -9 - 300;
+#X obj 450 128 s toVisual4;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 1 0;
@@ -1525,24 +1534,25 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 4 0 10 0;
 #X connect 5 0 4 0;
 #X connect 5 0 6 0;
-#X connect 7 0 13 0;
+#X connect 7 0 16 0;
 #X connect 8 0 7 0;
 #X connect 9 0 10 1;
 #X connect 9 0 11 0;
+#X connect 9 0 17 0;
 #X connect 10 0 3 1;
-#X connect 13 0 14 0;
-#X connect 14 0 9 0;
-#X connect 15 0 5 0;
-#X connect 16 0 15 0;
+#X connect 13 0 9 0;
+#X connect 14 0 5 0;
+#X connect 15 0 14 0;
+#X connect 16 0 13 0;
 #X restore 342 566 pd delay;
-#N canvas 166 560 450 300 BandPass 0;
+#N canvas 632 579 450 300 BandPass 1;
 #N canvas 1118 35 600 584 GradualChanger3 0;
 #X obj 40 30 cnv 15 500 500 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 211 385 float;
 #X obj 211 365 metro;
 #X floatatom 256 347 5 0 0 0 - - -;
-#X obj 126 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 126 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 51 136 1;
 #X obj 319 385 +;
@@ -1735,7 +1745,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj -67 100 vcf~;
 #X text 63 72 Q;
 #X obj -63 53 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1270 1;
+-1 -1 0 1;
 #X text -64 36 0-10000 frequency;
 #X obj -66 72 sig~;
 #X obj 63 91 hsl 50 30 0 15 0 0 empty empty empty -2 -8 0 10 -262144
@@ -1748,7 +1758,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 211 385 float;
 #X obj 211 365 metro;
 #X floatatom 256 347 5 0 0 0 - - -;
-#X obj 126 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 126 219 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 51 136 1;
 #X obj 319 385 +;
@@ -1940,6 +1950,8 @@ only allows a signal once \, untill "key" is lifted.;
 #X floatatom 151 114 5 0 0 0 - - -;
 #X obj -36 147 outlet~;
 #X obj -85 -30 inlet~;
+#X obj 157 201 s toVisual3;
+#X obj 187 73 s toVisual3_2;
 #X connect 0 0 4 0;
 #X connect 2 0 13 0;
 #X connect 4 0 6 0;
@@ -1947,21 +1959,23 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 6 0 2 1;
 #X connect 7 0 2 2;
 #X connect 7 0 12 0;
+#X connect 8 0 16 0;
 #X connect 9 0 0 0;
 #X connect 10 0 7 0;
 #X connect 11 0 10 0;
+#X connect 12 0 15 0;
 #X connect 14 0 2 0;
 #X restore 235 521 pd BandPass;
-#N canvas 1114 131 450 300 mads_tone 0;
+#N canvas 93 22 450 300 mads_tone 1;
 #X obj 157 248 outlet;
 #X floatatom 155 100 5 0 0 0 - - -;
-#N canvas 1101 366 601 479 GradualChangerTone 0;
+#N canvas 1101 366 601 479 GradualChangerTone 1;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -2152,12 +2166,14 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 79 0 3 0;
 #X restore 241 76 pd GradualChangerTone;
 #X obj 254 41 r ToneChange;
+#X obj 231 156 s toVisual5;
 #X connect 1 0 0 0;
+#X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
 #X restore 314 101 pd mads_tone;
 #X obj 741 333 s ToneChange;
-#N canvas 1021 101 512 573 randomExpander 0;
+#N canvas 69 210 512 573 randomExpander 1;
 #X obj 107 32 inlet~;
 #X obj 114 164 outlet~;
 #X floatatom 256 -27 5 0 0 0 - - -;
@@ -2177,7 +2193,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -2374,6 +2390,8 @@ only allows a signal once \, untill "key" is lifted.;
 #X floatatom 126 -133 5 0 0 0 - - -;
 #X obj 154 -57 * 700;
 #X msg 202 102 0.5;
+#X obj 317 -158 loadbang;
+#X obj 180 -98 s toVisual6;
 #X connect 0 0 1 0;
 #X connect 2 0 10 0;
 #X connect 3 0 13 0;
@@ -2394,7 +2412,10 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 18 0 19 0;
 #X connect 19 0 17 1;
 #X connect 19 0 16 1;
+#X connect 19 0 22 0;
 #X connect 20 0 9 0;
+#X connect 21 0 3 0;
+#X connect 21 0 6 0;
 #X restore 206 323 pd randomExpander;
 #X obj 739 354 s Randoms;
 #N canvas 529 420 498 283 mads5 0;
@@ -3705,7 +3726,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 541 392 cnv 15 300 300 empty empty Volume_Control_(MASTER) 20
 12 0 14 -232576 -66577 0;
 #X obj 545 517 vsl 40 150 0 1 0 0 empty empty empty 0 -9 0 10 -4034
--1 -1 13700 1;
+-1 -1 0 1;
 #X obj 585 431 ctlin;
 #X obj 545 494 / 127;
 #X floatatom 545 432 5 0 0 0 - - -;
@@ -3728,6 +3749,78 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 738 192 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 45 116 pddp/dsp;
+#N canvas 83 22 547 424 Info 0;
+#X obj 75 37 cnv 15 800 500 empty empty Visual_Feedback 20 12 0 14
+-233017 -66577 0;
+#X obj 75 94 r toVisual1;
+#X obj 96 176 vsl 30 150 2 5 0 0 empty empty empty 0 -9 0 10 -203904
+-1 -1 0 1;
+#X obj 408 176 vsl 30 150 70 700 0 0 empty empty empty 0 -9 0 10 -204786
+-1 -1 0 1;
+#X obj 375 84 r toVisual6;
+#X obj 346 176 vsl 30 150 20 50 0 0 empty empty empty 0 -9 0 10 -261234
+-1 -1 0 1;
+#X obj 295 84 r toVisual5;
+#X obj 284 176 vsl 30 150 0 0.5 0 0 empty empty empty 0 -9 0 10 -232576
+-1 -1 0 1;
+#X obj 221 176 vsl 15 150 0 4 0 0 empty empty empty 0 -9 0 10 -204800
+-1 -1 0 1;
+#X obj 159 176 vsl 30 150 0.1 4 0 0 empty empty empty 0 -9 0 10 -262130
+-1 -1 0 1;
+#X obj 215 64 r toVisual4;
+#X obj 135 64 r toVisual3;
+#X obj 155 94 r toVisual2;
+#X obj 237 176 vsl 15 150 200 1000 0 0 empty empty empty 0 -9 0 10
+-204800 -1 -1 0 1;
+#X obj 155 124 r toVisual3_2;
+#X text 146 331 LFO Speed;
+#X text 79 330 LFO INFLU;
+#X text 226 332 BP;
+#X text 287 331 Delay;
+#X text 348 333 Tone;
+#X text 397 333 RandomTones;
+#X text 166 348 2;
+#X text 104 348 1;
+#X text 235 348 3;
+#X text 298 349 4;
+#X text 357 350 5;
+#X text 418 349 6;
+#X connect 1 0 2 0;
+#X connect 4 0 3 0;
+#X connect 6 0 5 0;
+#X connect 10 0 7 0;
+#X connect 11 0 8 0;
+#X connect 12 0 9 0;
+#X connect 14 0 13 0;
+#X restore 507 144 pd Info;
+#N canvas 764 449 673 346 TCP 1;
+#X floatatom 99 90 5 0 0 0 - - -;
+#X msg 49 49 connect localhost 13001;
+#X msg 69 70 send Mytext anything;
+#X obj 58 149 netsend;
+#X floatatom 58 172 5 0 0 0 - - -;
+#X floatatom 492 67 5 0 0 0 - - -;
+#X obj 380 43 netreceive 13001;
+#X msg 99 109 send Number \$1;
+#X msg 198 122 send Code \$1;
+#X floatatom 198 104 5 0 0 0 - - -;
+#X obj 287 76 print received;
+#X floatatom 433 106 5 0 0 0 - - -;
+#X floatatom 388 107 5 0 0 0 - - -;
+#X obj 380 76 route Code Number;
+#X connect 0 0 7 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 10 0;
+#X connect 6 0 13 0;
+#X connect 6 1 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 8 0;
+#X connect 13 0 12 0;
+#X connect 13 1 11 0;
+#X restore 192 599 pd TCP;
 #X connect 1 0 32 0;
 #X connect 2 0 16 0;
 #X connect 7 0 48 0;
@@ -3784,15 +3877,9 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 63 0 62 0;
 #X connect 65 0 66 0;
 #X connect 66 0 71 0;
-#X connect 67 0 1 0;
-#X connect 68 0 2 0;
-#X connect 69 0 12 0;
-#X connect 70 0 13 0;
 #X connect 71 0 67 0;
 #X connect 71 1 68 0;
 #X connect 71 2 69 0;
 #X connect 71 3 70 0;
 #X connect 71 4 72 0;
 #X connect 71 5 73 0;
-#X connect 72 0 21 0;
-#X connect 73 0 22 0;
