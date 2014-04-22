@@ -1,22 +1,22 @@
-#N canvas 46 22 856 768 10;
+#N canvas 803 27 861 767 10;
 #X obj 621 90 cnv 15 220 350 empty empty Routing 20 12 0 14 -204800
 -66577 0;
-#X obj 700 250 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 700 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 700 268 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 676 248 "1";
+#X text 676 228 "1";
 #X text 676 266 "2";
 #X obj 38 90 cnv 15 580 350 empty empty Waveform_player 20 12 0 14
 -203904 -66577 0;
 #X obj 38 442 cnv 15 500 300 empty empty Mix 20 12 0 14 -261682 -66577
 0;
-#X obj 222 530 vcf~;
-#X obj 497 722 dac~;
-#X text 451 726 Output;
+#X obj 142 540 vcf~;
+#X obj 227 702 dac~;
+#X text 181 703 Output;
 #X obj 38 58 cnv 15 803 30 empty empty P4_Group406_GradualChangingFaceSoundFlipper
 20 12 0 20 -233017 -66577 0;
-#N canvas 319 439 601 479 GradualChanger 0;
+#N canvas 827 368 601 479 GradualChanger 0;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 220 374 float;
@@ -31,7 +31,7 @@
 #X msg 294 275 -5;
 #X obj 79 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 53 316 change;
+#X obj 53 313 change;
 #X msg 96 404 20;
 #X obj 79 404 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -40,7 +40,7 @@
 #X obj 96 385 < 20;
 #X text 48 293 Bounderies of Influence;
 #X msg 96 334 800;
-#X obj 96 317 > 800;
+#X obj 96 314 > 800;
 #X obj 220 394 min 800;
 #X text 43 48 To prevent that "key" will continously register key [change]
 only allows a signal once \, untill "key" is lifted.;
@@ -73,7 +73,6 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 328 179 < 2;
 #X msg 294 93 0;
 #X obj 330 118 metro 500;
-#X msg 265 316 15;
 #X obj 460 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 411 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -133,6 +132,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X msg 121 126 0;
 #X obj 330 77 loadbang;
 #X obj 137 100 r stopPush2;
+#X msg 265 316 15;
 #X connect 1 0 6 0;
 #X connect 1 0 16 0;
 #X connect 1 0 19 0;
@@ -157,7 +157,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 18 0 1 0;
 #X connect 19 0 11 0;
 #X connect 20 0 15 0;
-#X connect 22 0 47 0;
+#X connect 22 0 79 0;
 #X connect 23 0 5 0;
 #X connect 25 0 1 0;
 #X connect 26 0 38 0;
@@ -174,9 +174,9 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 35 0 36 0;
 #X connect 35 0 32 0;
 #X connect 36 0 32 0;
-#X connect 36 0 49 0;
+#X connect 36 0 48 0;
 #X connect 37 0 41 0;
-#X connect 37 0 75 0;
+#X connect 37 0 74 0;
 #X connect 38 0 39 0;
 #X connect 38 0 40 0;
 #X connect 39 0 38 1;
@@ -187,31 +187,31 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 41 1 43 0;
 #X connect 44 0 33 0;
 #X connect 45 0 27 0;
-#X connect 45 0 74 0;
+#X connect 45 0 73 0;
 #X connect 46 0 27 0;
-#X connect 47 0 3 0;
-#X connect 49 0 59 0;
-#X connect 49 0 54 0;
-#X connect 49 0 48 0;
-#X connect 49 0 56 0;
-#X connect 49 0 65 0;
-#X connect 49 0 62 0;
-#X connect 49 0 69 0;
-#X connect 49 0 64 0;
-#X connect 49 0 73 0;
-#X connect 74 0 57 0;
-#X connect 74 0 54 0;
-#X connect 74 0 51 0;
-#X connect 74 0 56 0;
-#X connect 74 0 67 0;
-#X connect 74 0 64 0;
-#X connect 74 0 71 0;
-#X connect 74 0 62 0;
-#X connect 76 0 46 0;
-#X connect 77 0 4 0;
+#X connect 48 0 58 0;
+#X connect 48 0 53 0;
+#X connect 48 0 47 0;
+#X connect 48 0 55 0;
+#X connect 48 0 64 0;
+#X connect 48 0 61 0;
+#X connect 48 0 68 0;
+#X connect 48 0 63 0;
+#X connect 48 0 72 0;
+#X connect 73 0 56 0;
+#X connect 73 0 53 0;
+#X connect 73 0 50 0;
+#X connect 73 0 55 0;
+#X connect 73 0 66 0;
+#X connect 73 0 63 0;
+#X connect 73 0 70 0;
+#X connect 73 0 61 0;
+#X connect 75 0 46 0;
+#X connect 76 0 4 0;
+#X connect 77 0 75 0;
 #X connect 78 0 76 0;
-#X connect 79 0 77 0;
-#X restore 235 486 pd GradualChanger;
+#X connect 79 0 3 0;
+#X restore 152 496 pd GradualChanger;
 #X obj 700 286 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 700 304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -219,13 +219,13 @@ only allows a signal once \, untill "key" is lifted.;
 #X text 676 284 "3";
 #X text 676 302 "4";
 #X obj 724 268 s LFO_UP;
-#X obj 235 450 r LFO_UP;
-#N canvas 1060 96 420 349 LFO_BP 0;
+#X obj 152 476 r LFO_UP;
+#N canvas 276 614 420 349 LFO_BP 0;
 #X obj 6 -554 cnv 15 400 340 empty empty Low_frequency_Occilator_/_Band_pass
 20 12 0 14 -262130 -66577 0;
 #X floatatom 100 -269 5 0 0 0 - - -;
 #X obj 100 -403 vsl 15 128 0 20 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1270 1;
+-1 -1 635 1;
 #X obj 26 -399 +~ 1;
 #X obj 26 -378 *~ 0.5;
 #X obj 26 -420 osc~ 2;
@@ -252,7 +252,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 339 -466 loadbang;
 #X msg 352 -441 125;
 #X obj 302 -330 inlet;
-#N canvas 1031 540 601 479 GradualChanger3 0;
+#N canvas 449 396 601 479 GradualChanger3 0;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 220 374 float;
@@ -300,7 +300,6 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 328 179 < 2;
 #X msg 294 93 0;
 #X obj 330 118 metro 500;
-#X msg 265 316 15;
 #X obj 460 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 411 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -359,17 +358,18 @@ only allows a signal once \, untill "key" is lifted.;
 #X msg 330 97 bang;
 #X msg 121 126 0;
 #X obj 330 77 loadbang;
-#X obj 96 317 > 5;
-#X msg 96 334 5;
 #X obj 137 100 r stopPush1;
 #X msg 265 275 0.1;
 #X msg 294 275 -0.1;
-#X obj 220 393 min 5;
-#X obj 220 413 max 2;
-#X obj 96 385 < 2;
-#X msg 96 404 2;
+#X msg 265 316 60;
+#X obj 220 393 min 3;
+#X obj 220 413 max 1;
+#X obj 96 317 > 3;
+#X msg 96 334 3;
+#X obj 96 385 < 1;
+#X msg 96 404 1;
 #X connect 1 0 6 0;
-#X connect 1 0 70 0;
+#X connect 1 0 73 0;
 #X connect 1 0 75 0;
 #X connect 1 0 77 0;
 #X connect 2 0 1 0;
@@ -380,11 +380,11 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 5 0 4 0;
 #X connect 6 0 1 1;
 #X connect 7 0 16 0;
-#X connect 8 0 71 0;
+#X connect 8 0 76 0;
 #X connect 9 0 8 0;
 #X connect 10 0 78 0;
 #X connect 11 0 10 0;
-#X connect 14 0 38 0;
+#X connect 14 0 72 0;
 #X connect 15 0 5 0;
 #X connect 17 0 29 0;
 #X connect 18 0 19 0;
@@ -400,49 +400,49 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 26 0 27 0;
 #X connect 26 0 23 0;
 #X connect 27 0 23 0;
-#X connect 27 0 40 0;
+#X connect 27 0 39 0;
 #X connect 28 0 32 0;
-#X connect 28 0 66 0;
+#X connect 28 0 65 0;
 #X connect 29 0 30 0;
 #X connect 29 0 31 0;
 #X connect 30 0 29 1;
 #X connect 31 0 28 0;
-#X connect 32 0 73 0;
+#X connect 32 0 70 0;
 #X connect 32 0 33 0;
-#X connect 32 1 74 0;
+#X connect 32 1 71 0;
 #X connect 32 1 34 0;
 #X connect 35 0 24 0;
 #X connect 36 0 18 0;
-#X connect 36 0 65 0;
+#X connect 36 0 64 0;
 #X connect 37 0 18 0;
-#X connect 38 0 3 0;
-#X connect 40 0 50 0;
-#X connect 40 0 45 0;
-#X connect 40 0 39 0;
-#X connect 40 0 47 0;
-#X connect 40 0 56 0;
-#X connect 40 0 53 0;
-#X connect 40 0 60 0;
-#X connect 40 0 55 0;
-#X connect 40 0 64 0;
-#X connect 65 0 48 0;
-#X connect 65 0 45 0;
-#X connect 65 0 42 0;
-#X connect 65 0 47 0;
-#X connect 65 0 58 0;
-#X connect 65 0 55 0;
-#X connect 65 0 62 0;
-#X connect 65 0 53 0;
-#X connect 67 0 37 0;
-#X connect 68 0 4 0;
+#X connect 39 0 49 0;
+#X connect 39 0 44 0;
+#X connect 39 0 38 0;
+#X connect 39 0 46 0;
+#X connect 39 0 55 0;
+#X connect 39 0 52 0;
+#X connect 39 0 59 0;
+#X connect 39 0 54 0;
+#X connect 39 0 63 0;
+#X connect 64 0 47 0;
+#X connect 64 0 44 0;
+#X connect 64 0 41 0;
+#X connect 64 0 46 0;
+#X connect 64 0 57 0;
+#X connect 64 0 54 0;
+#X connect 64 0 61 0;
+#X connect 64 0 52 0;
+#X connect 66 0 37 0;
+#X connect 67 0 4 0;
+#X connect 68 0 66 0;
 #X connect 69 0 67 0;
-#X connect 70 0 9 0;
-#X connect 71 0 1 0;
-#X connect 72 0 68 0;
-#X connect 73 0 6 1;
-#X connect 74 0 6 1;
-#X connect 75 0 76 0;
-#X connect 76 0 7 0;
+#X connect 70 0 6 1;
+#X connect 71 0 6 1;
+#X connect 72 0 3 0;
+#X connect 73 0 74 0;
+#X connect 74 0 7 0;
+#X connect 75 0 9 0;
+#X connect 76 0 1 0;
 #X connect 77 0 11 0;
 #X connect 78 0 1 0;
 #X restore 175 -381 pd GradualChanger3;
@@ -474,33 +474,33 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 25 0 7 0;
 #X connect 26 0 27 0;
 #X connect 27 0 2 0;
-#X restore 235 508 pd LFO_BP;
+#X restore 152 518 pd LFO_BP;
 #X obj 144 416 s~ toMix;
-#X obj 65 501 r~ toMix;
+#X obj 46 465 r~ toMix;
 #X obj 700 329 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 701 384 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text 676 327 "5";
 #X text 676 381 "6";
-#X obj 625 249 r face1;
+#X obj 625 229 r face1;
 #X obj 625 268 r face2;
 #X obj 625 287 r face3;
 #X obj 625 306 r face4;
 #X obj 625 332 r face5;
 #X obj 625 380 r face6;
 #X obj 724 249 s InfluenceOfWah;
-#X obj 362 484 r InfluenceOfWah;
+#X obj 261 496 r InfluenceOfWah;
 #X obj 724 287 s BP;
 #X obj 565 417 + 1;
 #X obj 582 175 r to1;
-#X obj 438 661 *~;
+#X obj 142 661 *~;
 #N canvas 951 116 620 742 audioselect_which_needs_to_be_long 0;
 #X obj 25 24 cnv 15 550 700 empty empty Audio_Selecter 20 12 0 14 -260097
 -66577 0;
 #X obj 87 504 inlet~;
 #X obj 130 504 inlet~;
-#X obj 65 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 65 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 82 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -537,7 +537,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 512 227 sel 10;
 #X obj 510 250 sel 11;
 #X obj 508 270 sel 12;
-#X obj 134 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 134 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 151 128 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -1108,7 +1108,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 14 0 5 0;
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
-#X restore 331 596 pd delay;
+#X restore 142 580 pd delay;
 #N canvas 632 579 450 300 BandPass 0;
 #N canvas 1118 35 600 584 GradualChanger3 0;
 #X obj 40 30 cnv 15 500 500 empty empty Gradual_change 20 12 0 14 -204786
@@ -1529,7 +1529,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 11 0 10 0;
 #X connect 12 0 15 0;
 #X connect 14 0 2 0;
-#X restore 331 576 pd BandPass;
+#X restore 142 560 pd BandPass;
 #N canvas 94 22 450 300 mads_tone 0;
 #X obj 157 248 outlet;
 #X floatatom 155 100 5 0 0 0 - - -;
@@ -1740,7 +1740,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 5 0 1 0;
 #X connect 6 0 5 0;
 #X restore 44 143 pd mads_tone;
-#X obj 724 332 s ToneChange;
+#X obj 728 332 s ToneChange;
 #N canvas 529 420 498 283 mads5 0;
 #X floatatom 37 18 5 0 0 0 - - -;
 #X obj 37 36 mtof;
@@ -3458,7 +3458,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 144 0 146 0;
 #X connect 145 0 147 0;
 #X restore 749 721 pd midi_Inputs;
-#N canvas 3457 73 935 759 importMusic 0;
+#N canvas 139 73 935 759 importMusic 0;
 #X obj 16 -40 cnv 15 580 500 empty empty Waveform_player 20 12 0 14
 -203904 -66577 0;
 #X obj 33 28 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
@@ -3529,11 +3529,11 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 26 0 25 1;
 #X connect 27 0 28 0;
 #X restore 748 682 pd importMusic;
-#N canvas 1056 50 547 424 Info 0;
+#N canvas 833 167 547 424 Info 1;
 #X obj 75 37 cnv 15 800 500 empty empty Visual_Feedback 20 12 0 14
 -233017 -66577 0;
 #X obj 96 72 r toVisual1;
-#X obj 96 176 vsl 30 150 2 5 0 0 empty empty empty 0 -9 0 10 -203904
+#X obj 146 176 vsl 15 150 1 3 0 0 empty empty empty 0 -9 0 10 -262130
 -1 -1 0 1;
 #X obj 346 176 vsl 30 150 20 50 0 0 empty empty empty 0 -9 0 10 -261234
 -1 -1 0 1;
@@ -3542,7 +3542,7 @@ only allows a signal once \, untill "key" is lifted.;
 -1 -1 0 1;
 #X obj 221 176 vsl 15 150 0 4 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 0 1;
-#X obj 159 176 vsl 30 150 0.1 4 0 0 empty empty empty 0 -9 0 10 -262130
+#X obj 159 176 vsl 15 150 0.1 4 0 0 empty empty empty 0 -9 0 10 -262130
 -1 -1 0 1;
 #X obj 284 41 r toVisual4;
 #X obj 221 71 r toVisual3;
@@ -3551,34 +3551,34 @@ only allows a signal once \, untill "key" is lifted.;
 -204800 -1 -1 14900 1;
 #X obj 237 118 r toVisual3_2;
 #X text 146 331 LFO Speed;
-#X text 79 330 LFO INFLU;
 #X text 226 332 BP;
 #X text 287 331 Delay;
-#X text 348 333 Tone;
 #X text 166 348 2;
 #X text 104 348 1;
 #X text 235 348 3;
 #X text 298 349 4;
 #X text 357 350 5;
-#X text 418 349 6;
-#X text 400 333 Tremolo;
-#X obj 405 176 vsl 15 150 2 30 0 0 empty empty empty 0 -9 0 10 -204786
+#X text 422 349 6;
+#X text 404 333 Tremolo;
+#X obj 409 176 vsl 15 150 2 30 0 0 empty empty empty 0 -9 0 10 -204786
 -1 -1 14900 1;
-#X obj 421 176 vsl 15 150 0.5 1 0 0 empty empty empty 0 -9 0 10 -204786
+#X obj 425 176 vsl 15 150 0.5 1 0 0 empty empty empty 0 -9 0 10 -204786
 -1 -1 14900 1;
-#X obj 405 91 r toVisual6;
-#X obj 421 118 r toVisual6_2;
+#X obj 409 91 r toVisual6;
+#X obj 425 118 r toVisual6_2;
+#X text 336 333 Overdrive;
+#X text 84 330 Sustain;
 #X connect 1 0 2 0;
 #X connect 4 0 3 0;
 #X connect 8 0 5 0;
 #X connect 9 0 6 0;
 #X connect 10 0 7 0;
 #X connect 12 0 11 0;
-#X connect 27 0 25 0;
-#X connect 28 0 26 0;
+#X connect 25 0 23 0;
+#X connect 26 0 24 0;
 #X restore 790 701 pd Info;
 #X obj 590 194 vradio 20 1 0 12 empty empty empty 0 -8 0 10 -260097
--1 -1 4;
+-1 -1 0;
 #N canvas 1090 595 450 300 recorder 0;
 #X msg 228 134 stop;
 #X obj 59 99 inlet~;
@@ -3589,7 +3589,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 1 0 3 1;
 #X connect 2 0 3 0;
 #X connect 4 0 3 0;
-#X restore 326 695 pd recorder;
+#X restore 89 704 pd recorder;
 #N canvas 685 530 536 438 SampleTrack1 0;
 #X obj 21 -30 cnv 15 480 400 empty empty Waveform_player 20 12 0 14
 -204800 -66577 0;
@@ -4129,7 +4129,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 17 0 3 0;
 #X connect 18 0 1 0;
 #X restore 459 342 pd SampleTrack12;
-#N canvas 460 273 566 448 tremolo 0;
+#N canvas 1060 526 566 448 tremolo 0;
 #X obj 195 46 float;
 #X obj 190 11 metro;
 #X floatatom 192 142 5 0 0 0 - - -;
@@ -4138,20 +4138,20 @@ only allows a signal once \, untill "key" is lifted.;
 #X floatatom 228 -14 5 0 0 0 - - -;
 #X msg 166 46 0;
 #X obj 244 47 +;
-#X obj 394 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 394 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 245 163 > 1;
-#X obj 356 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 245 203 > 1;
+#X obj 356 179 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 277 139 select 0 1;
-#X obj 279 165 select 0 1;
+#X obj 277 179 select 0 1;
+#X obj 279 205 select 0 1;
 #X obj 132 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11938 1;
+-1 -1 12065 1;
 #X obj 52 119 *~;
 #X obj 46 3 inlet~;
 #X msg 268 23 0.05;
 #X msg 315 24 -0.05;
-#X obj 464 -42 r tremolo;
+#X obj 289 -90 r tremolo;
 #N canvas 1031 540 601 479 GradualChanger6 0;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
@@ -4347,8 +4347,8 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 78 0 1 0;
 #X restore 277 -54 pd GradualChanger6;
 #X obj 74 -97 pddp/dsp;
-#X obj 234 133 <;
-#N canvas 1022 373 612 558 GradualChanger7mod 0;
+#X obj 234 173 <;
+#N canvas 354 381 612 558 GradualChanger7mod 0;
 #X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
 -66577 0;
 #X obj 220 374 float;
@@ -4370,7 +4370,7 @@ only allows a signal once \, untill "key" is lifted.;
 only allows a signal once \, untill "key" is lifted.;
 #X obj 265 296 loadbang;
 #X obj 84 94 inlet;
-#X obj 368 488 outlet;
+#X obj 221 457 outlet;
 #X obj 219 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 328 139 float;
@@ -4461,19 +4461,13 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 95 348 > 1;
 #X msg 95 365 1;
 #X obj 220 393 min 1;
-#X floatatom 164 479 5 0 0 0 - - -;
-#X obj 223 469 -;
-#X floatatom 496 479 5 0 0 0 - - -;
-#X obj 155 433 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 96 385 < 0.5;
-#X msg 96 404 0.5;
-#X obj 220 413 max 0.5;
-#X msg 140 454 1.5;
+#X obj 220 413 max 0.4;
+#X obj 96 385 < 0.4;
+#X msg 96 404 0.4;
 #X connect 1 0 6 0;
 #X connect 1 0 73 0;
 #X connect 1 0 75 0;
-#X connect 1 0 80 0;
+#X connect 1 0 77 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 1;
 #X connect 4 0 2 0;
@@ -4481,11 +4475,10 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 4 0 36 0;
 #X connect 5 0 4 0;
 #X connect 6 0 1 1;
-#X connect 7 0 77 1;
-#X connect 7 0 79 0;
+#X connect 7 0 16 0;
 #X connect 8 0 74 0;
 #X connect 9 0 8 0;
-#X connect 10 0 81 0;
+#X connect 10 0 78 0;
 #X connect 11 0 10 0;
 #X connect 14 0 72 0;
 #X connect 15 0 5 0;
@@ -4544,19 +4537,17 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 72 0 3 0;
 #X connect 73 0 9 0;
 #X connect 74 0 1 0;
-#X connect 75 0 82 0;
-#X connect 76 0 77 0;
-#X connect 77 0 78 0;
-#X connect 77 0 16 0;
-#X connect 79 0 83 0;
-#X connect 80 0 11 0;
-#X connect 81 0 1 0;
-#X connect 82 0 7 0;
-#X connect 83 0 76 0;
-#X restore 415 25 pd GradualChanger7mod;
+#X connect 75 0 76 0;
+#X connect 76 0 7 0;
+#X connect 77 0 11 0;
+#X connect 78 0 1 0;
+#X restore 422 -53 pd GradualChanger7mod;
 #X obj 50 199 outlet~;
-#X obj 271 -21 s toVisual6;
-#X obj 433 76 s toVisual6_2;
+#X obj 302 -3 s toVisual6;
+#X obj 425 4 s toVisual6_2;
+#X obj 177 -76 loadbang;
+#X obj 188 -46 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 6 0;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
@@ -4578,16 +4569,261 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 14 0 13 0;
 #X connect 15 0 6 1;
 #X connect 16 0 6 1;
-#X connect 17 0 21 0;
 #X connect 17 0 18 0;
+#X connect 17 0 21 0;
 #X connect 18 0 4 0;
 #X connect 20 0 10 0;
-#X connect 21 0 20 1;
 #X connect 21 0 24 0;
-#X restore 331 616 pd tremolo;
+#X connect 21 0 20 1;
+#X connect 25 0 26 0;
+#X connect 26 0 3 0;
+#X restore 142 600 pd tremolo;
 #X obj 742 385 s tremolo;
-#X connect 1 0 31 0;
+#N canvas 340 371 450 333 overdrive 0;
+#X obj 43 9 inlet~;
+#X obj 37 212 outlet~;
+#X obj 63 110 *~;
+#X obj 165 93 vsl 15 128 0 20 0 0 empty empty empty 0 -9 0 10 -4032
+-1 -1 635 1;
+#X obj 198 -40 r Overdrive;
+#N canvas 851 399 601 573 GradualChanger 0;
+#X obj 40 30 cnv 15 360 400 empty empty Gradual_change 20 12 0 14 -204786
+-66577 0;
+#X obj 220 374 float;
+#X obj 220 354 metro;
+#X floatatom 265 336 5 0 0 0 - - -;
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 60 125 1;
+#X obj 328 374 +;
+#X floatatom 220 468 5 0 0 0 - - -;
+#X obj 79 335 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 316 change;
+#X obj 79 404 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 385 change;
+#X text 48 293 Bounderies of Influence;
+#X text 43 48 To prevent that "key" will continously register key [change]
+only allows a signal once \, untill "key" is lifted.;
+#X obj 265 296 loadbang;
+#X obj 84 94 inlet;
+#X obj 220 487 outlet;
+#X obj 219 163 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 328 139 float;
+#X obj 366 139 + 1;
+#X floatatom 328 159 5 0 0 0 - - -;
+#X obj 219 143 oneshot;
+#X msg 163 161 bang;
+#X msg 219 122 clear;
+#X floatatom 328 200 5 0 0 0 - - -;
+#X msg 295 140 0;
+#X obj 328 220 select 0;
+#X obj 295 159 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 209 229 mod 2;
+#X obj 209 190 float;
+#X obj 247 190 + 1;
+#X floatatom 209 210 5 0 0 0 - - -;
+#X obj 210 250 select 0 1;
+#X obj 350 248 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 350 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 328 179 < 2;
+#X msg 294 93 0;
+#X obj 330 118 metro 500;
+#X obj 460 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 411 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 460 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 460 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 460 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 496 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 496 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 496 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 496 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 460 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 478 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 496 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 514 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 131 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 165 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 532 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 409 178 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 379 246 5 0 0 0 - - -;
+#X msg 330 97 bang;
+#X msg 121 126 0;
+#X obj 330 77 loadbang;
+#X obj 137 100 r stopPush2;
+#X obj 96 385 < 1;
+#X msg 96 404 1;
+#X obj 221 448 max 1;
+#X msg 265 275 0.1;
+#X msg 294 275 -0.1;
+#X obj 217 428 min 4;
+#X obj 96 317 > 4;
+#X msg 96 334 4;
+#X msg 265 316 20;
+#X connect 1 0 6 0;
+#X connect 1 0 70 0;
+#X connect 1 0 75 0;
+#X connect 1 0 76 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 4 0 22 0;
+#X connect 4 0 36 0;
+#X connect 5 0 4 0;
+#X connect 6 0 1 1;
+#X connect 7 0 16 0;
+#X connect 8 0 77 0;
+#X connect 9 0 8 0;
+#X connect 10 0 71 0;
+#X connect 11 0 10 0;
+#X connect 14 0 78 0;
+#X connect 15 0 5 0;
+#X connect 17 0 29 0;
+#X connect 18 0 19 0;
+#X connect 18 0 20 0;
+#X connect 19 0 18 1;
+#X connect 20 0 35 0;
+#X connect 21 0 17 0;
+#X connect 22 0 21 0;
+#X connect 23 0 21 0;
+#X connect 24 0 26 0;
+#X connect 25 0 18 0;
+#X connect 26 0 25 0;
+#X connect 26 0 27 0;
+#X connect 26 0 23 0;
+#X connect 27 0 23 0;
+#X connect 27 0 39 0;
+#X connect 28 0 32 0;
+#X connect 28 0 65 0;
+#X connect 29 0 30 0;
+#X connect 29 0 31 0;
+#X connect 30 0 29 1;
+#X connect 31 0 28 0;
+#X connect 32 0 73 0;
+#X connect 32 0 33 0;
+#X connect 32 1 74 0;
+#X connect 32 1 34 0;
+#X connect 35 0 24 0;
+#X connect 36 0 18 0;
+#X connect 36 0 64 0;
+#X connect 37 0 18 0;
+#X connect 39 0 49 0;
+#X connect 39 0 44 0;
+#X connect 39 0 38 0;
+#X connect 39 0 46 0;
+#X connect 39 0 55 0;
+#X connect 39 0 52 0;
+#X connect 39 0 59 0;
+#X connect 39 0 54 0;
+#X connect 39 0 63 0;
+#X connect 64 0 47 0;
+#X connect 64 0 44 0;
+#X connect 64 0 41 0;
+#X connect 64 0 46 0;
+#X connect 64 0 57 0;
+#X connect 64 0 54 0;
+#X connect 64 0 61 0;
+#X connect 64 0 52 0;
+#X connect 66 0 37 0;
+#X connect 67 0 4 0;
+#X connect 68 0 66 0;
+#X connect 69 0 67 0;
+#X connect 70 0 11 0;
+#X connect 71 0 1 0;
+#X connect 72 0 7 0;
+#X connect 73 0 6 1;
+#X connect 74 0 6 1;
+#X connect 75 0 72 0;
+#X connect 76 0 9 0;
+#X connect 77 0 1 0;
+#X connect 78 0 3 0;
+#X restore 179 -1 pd GradualChanger;
+#X floatatom 176 65 5 0 0 0 - - -;
+#X obj 142 -40 loadbang;
+#X msg 142 -21 1;
+#X obj 37 177 clip~ -0.3 0.3;
+#X connect 0 0 2 0;
+#X connect 2 0 9 0;
+#X connect 3 0 2 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 9 0 1 0;
+#X restore 142 620 pd overdrive;
+#X obj 700 355 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 625 358 r face5;
+#X text 676 353 "5.";
+#X obj 728 358 s Overdrive;
+#X obj 265 584 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -203904
+-1 -1 4900 1;
+#N canvas 306 490 450 300 Limiter-Unfinished 0;
+#X obj 91 224 outlet~;
+#X obj 88 31 inlet~;
+#X obj 232 56 inlet;
+#X obj 210 89 +;
+#X obj 163 78 -;
+#X floatatom 223 120 5 0 0 0 - - -;
+#X floatatom 163 103 5 0 0 0 - - -;
+#X msg 165 52 0;
+#X obj 128 134 clip~;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 2 0 4 1;
+#X connect 2 0 7 0;
+#X connect 3 0 5 0;
+#X connect 3 0 8 2;
+#X connect 4 0 6 0;
+#X connect 4 0 8 1;
+#X connect 7 0 4 0;
+#X connect 8 0 0 0;
+#X restore 142 640 pd Limiter-Unfinished;
 #X connect 2 0 16 0;
+#X connect 2 0 31 0;
 #X connect 7 0 44 0;
 #X connect 11 0 18 0;
 #X connect 12 0 33 0;
@@ -4651,7 +4887,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 65 3 64 0;
 #X connect 65 4 66 0;
 #X connect 65 5 67 0;
-#X connect 66 0 21 0;
+#X connect 66 0 116 0;
 #X connect 67 0 22 0;
 #X connect 73 0 34 0;
 #X connect 75 0 86 0;
@@ -4718,4 +4954,9 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 110 0 106 0;
 #X connect 111 0 107 0;
 #X connect 112 0 108 0;
-#X connect 113 0 36 0;
+#X connect 113 0 115 0;
+#X connect 115 0 121 0;
+#X connect 116 0 119 0;
+#X connect 117 0 116 0;
+#X connect 120 0 121 1;
+#X connect 121 0 36 0;
