@@ -1,4 +1,4 @@
-#N canvas 73 42 861 767 10;
+#N canvas 53 36 896 775 10;
 #X obj 621 90 cnv 15 220 350 empty empty Routing 20 12 0 14 -204800
 -66577 0;
 #X obj 700 230 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2427,7 +2427,7 @@ only allows a signal once \, untill "key" is lifted.;
 -1 -1 0 1;
 #X obj 322 61 r toVisual5;
 #X obj 260 174 vsl 30 150 0 0.5 0 0 empty empty empty 0 -9 0 10 -232576
--1 -1 14900 1;
+-1 -1 0 1;
 #X obj 197 174 vsl 15 150 0 4 0 0 empty empty empty 0 -9 0 10 -204800
 -1 -1 0 1;
 #X obj 135 174 vsl 15 150 0.1 4 0 0 empty empty empty 0 -9 0 10 -262130
@@ -2449,7 +2449,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X text 398 347 6;
 #X text 380 331 Tremolo;
 #X obj 385 174 vsl 15 150 2 30 0 0 empty empty empty 0 -9 0 10 -204786
--1 -1 14900 1;
+-1 -1 0 1;
 #X obj 401 174 vsl 15 150 0.5 1 0 0 empty empty empty 0 -9 0 10 -204786
 -1 -1 14900 1;
 #X obj 385 89 r toVisual6;
@@ -2567,7 +2567,7 @@ only allows a signal once \, untill "key" is lifted.;
 1;
 #X obj 330 143 *~;
 #X obj 338 161 *~;
-#X obj 337 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 337 105 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 984 576 536 438 SampleTrack3 0;
 #X obj 21 -30 cnv 15 480 400 empty empty Waveform_player 20 12 0 14
@@ -3072,7 +3072,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -3268,7 +3268,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -3920,7 +3920,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 223 204 cnv 15 200 80 empty empty Influence_of_Delay 20 12 0
 14 -204786 -66577 0;
 #X obj 247 233 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7056 1;
+-1 -1 0 1;
 #X floatatom 244 256 5 0 0 0 - - -;
 #X obj 281 254 s toVisual4;
 #X obj 223 41 cnv 15 200 160 empty empty Signal 20 12 0 14 -261234
@@ -3931,7 +3931,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -4128,7 +4128,7 @@ only allows a signal once \, untill "key" is lifted.;
 -66577 0;
 #X obj 79 155 delread~ pass;
 #X obj 82 109 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 2794 1;
 #X floatatom 92 134 5 0 0 0 - - -;
 #X msg 79 89 220;
 #X obj 79 69 loadbang;
@@ -4173,7 +4173,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 277 179 select 0 1;
 #X obj 279 205 select 0 1;
 #X obj 132 45 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11430 1;
+-1 -1 12700 1;
 #X obj 52 119 *~;
 #X obj 46 3 inlet~;
 #X msg 268 23 0.05;
@@ -4185,7 +4185,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -4823,7 +4823,7 @@ only allows a signal once \, untill "key" is lifted.;
 #X connect 8 0 6 0;
 #X connect 10 0 1 0;
 #X restore 113 643 pd MARETTY-overdrive;
-#N canvas 661 87 907 563 Mrtn-Compressor 0;
+#N canvas 94 128 1114 687 Mrtn-Compressor 1;
 #X obj -168 24 cnv 15 850 500 empty empty Compressor 20 12 0 14 -261682
 -66577 0;
 #X obj 34 253 clip~ 0 1;
@@ -4922,34 +4922,48 @@ only allows a signal once \, untill "key" is lifted.;
 #X text 108 92 RMS/Peak selector;
 #X text 86 185 Gain computation RMS/Peak;
 #X text -136 233 dummy cable;
-#X obj 254 77 inlet control;
-#X obj 254 186 route threshold ratio response gain rmspeak lookahead
+#X obj 298 220 route threshold ratio response gain rmspeak lookahead
 ;
-#X obj 254 316 + 100;
-#X obj 254 339 dbtorms;
-#X obj 254 365 s \$0-thresh;
-#X obj 306 297 swap 1;
-#X obj 306 320 /;
-#X obj 306 345 s \$0-ratio;
-#X obj 516 212 s \$0-lookahead;
-#X obj 464 232 s \$0-rmspeak;
-#X obj 411 210 + 100;
-#X obj 411 232 dbtorms;
-#X obj 411 255 s \$0-gain;
-#X obj 359 276 swap 1000;
-#X obj 359 300 /;
-#X obj 359 323 s \$0-response;
-#X text 253 385 Convert dB FS to Pd dB scale and then linear amplitude
+#X obj 298 350 + 100;
+#X obj 298 373 dbtorms;
+#X obj 298 399 s \$0-thresh;
+#X obj 350 331 swap 1;
+#X obj 350 354 /;
+#X obj 350 379 s \$0-ratio;
+#X obj 560 246 s \$0-lookahead;
+#X obj 508 266 s \$0-rmspeak;
+#X obj 455 244 + 100;
+#X obj 455 266 dbtorms;
+#X obj 455 289 s \$0-gain;
+#X obj 403 310 swap 1000;
+#X obj 403 334 /;
+#X obj 403 357 s \$0-response;
+#X text 297 419 Convert dB FS to Pd dB scale and then linear amplitude
 ;
-#X text 328 365 inverse of ratio;
-#X text 375 340 convert ms to frequency;
-#X text 425 276 convert dBFS scale to Pd dB scale;
-#X text 473 252 RMS/peak selection;
-#X text 543 231 lookahead value in ms;
-#X text 495 164 route incoming data;
-#X obj 272 99 loadbang;
-#X msg 272 122 threshold -2 \, ratio 2 \, response 40 \, gain 0 \,
-rmspeak 0 \, lookahead 0;
+#X text 372 399 inverse of ratio;
+#X text 419 374 convert ms to frequency;
+#X text 469 310 convert dBFS scale to Pd dB scale;
+#X text 517 286 RMS/peak selection;
+#X text 587 265 lookahead value in ms;
+#X text 539 198 route incoming data;
+#X obj 293 69 r \$0-threshSet;
+#X obj 391 70 r \$0-ratioSet;
+#X obj 478 70 r \$0-respSet;
+#X obj 559 70 r \$0-gainSet;
+#X obj 642 70 r \$0-rmsPeakSet;
+#X obj 742 70 r \$0-lookSet;
+#X msg 293 109 threshold \$1;
+#X msg 391 110 ratio \$1;
+#X msg 478 110 response \$1;
+#X msg 559 110 gain \$1;
+#X msg 642 110 rmspeak \$1;
+#X msg 742 110 lookahead \$1;
+#X floatatom 299 89 5 0 0 0 - - -;
+#X floatatom 398 90 5 0 0 0 - - -;
+#X floatatom 485 89 5 0 0 0 - - -;
+#X floatatom 565 90 5 0 0 0 - - -;
+#X floatatom 649 90 5 0 0 0 - - -;
+#X floatatom 749 90 5 0 0 0 - - -;
 #X connect 1 0 2 0;
 #X connect 2 0 10 1;
 #X connect 3 0 2 1;
@@ -4970,24 +4984,39 @@ rmspeak 0 \, lookahead 0;
 #X connect 17 1 8 1;
 #X connect 18 0 7 1;
 #X connect 29 0 30 0;
+#X connect 29 1 33 0;
+#X connect 29 2 41 0;
+#X connect 29 3 38 0;
+#X connect 29 4 37 0;
+#X connect 29 5 36 0;
 #X connect 30 0 31 0;
-#X connect 30 1 34 0;
-#X connect 30 2 42 0;
-#X connect 30 3 39 0;
-#X connect 30 4 38 0;
-#X connect 30 5 37 0;
 #X connect 31 0 32 0;
-#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 1 34 1;
 #X connect 34 0 35 0;
-#X connect 34 1 35 1;
-#X connect 35 0 36 0;
+#X connect 38 0 39 0;
 #X connect 39 0 40 0;
-#X connect 40 0 41 0;
+#X connect 41 0 42 0;
+#X connect 41 1 42 1;
 #X connect 42 0 43 0;
-#X connect 42 1 43 1;
-#X connect 43 0 44 0;
-#X connect 52 0 53 0;
-#X connect 53 0 30 0;
+#X connect 51 0 57 0;
+#X connect 51 0 63 0;
+#X connect 52 0 58 0;
+#X connect 52 0 64 0;
+#X connect 53 0 59 0;
+#X connect 53 0 65 0;
+#X connect 54 0 60 0;
+#X connect 54 0 66 0;
+#X connect 55 0 61 0;
+#X connect 55 0 67 0;
+#X connect 56 0 62 0;
+#X connect 56 0 68 0;
+#X connect 57 0 29 0;
+#X connect 58 0 29 0;
+#X connect 59 0 29 0;
+#X connect 60 0 29 0;
+#X connect 61 0 29 0;
+#X connect 62 0 29 0;
 #X restore 338 665 pd Mrtn-Compressor;
 #N canvas 1149 54 497 331 MARETTY-Delay 0;
 #X obj 50 7 cnv 15 400 300 empty empty Delay 20 12 0 14 -228856 -66577
@@ -5005,7 +5034,7 @@ rmspeak 0 \, lookahead 0;
 #X obj 220 374 float;
 #X obj 220 354 metro;
 #X floatatom 265 336 5 0 0 0 - - -;
-#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 135 208 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 60 125 1;
 #X obj 328 374 +;
@@ -5233,6 +5262,64 @@ only allows a signal once \, untill "key" is lifted.;
 #X restore 113 683 pd MARETTY-Delay;
 #X obj 724 228 s RhythmDelay;
 #X text 122 667 Rhythm Delay (1);
+#N canvas 996 97 589 331 CompressorControl 0;
+#X obj 19 11 cnv 15 550 300 empty empty CompressorControls 20 12 0
+14 -228856 -66577 0;
+#X obj 34 94 vsl 70 128 -40 0 0 0 \$0-threshSet empty empty 0 -9 0
+10 -261682 -1 -1 11112 1;
+#X obj 380 92 hradio 40 1 0 2 \$0-rmsPeakSet empty empty 0 24 0 10
+-232576 -1 -1 0;
+#X text 40 72 THRESHOLD;
+#X text 395 72 RMS/PEAK;
+#X text 312 72 GAIN;
+#X text 148 72 RATIO;
+#X text 485 72 LOOK AHEAD;
+#X obj 128 94 vsl 70 128 40 0 0 0 \$0-ratioSet empty empty 0 -9 0 10
+-204800 -1 -1 11747 1;
+#X obj 214 94 vsl 70 128 0 40 0 0 \$0-respSet empty empty 0 -9 0 10
+-262130 -1 -1 12700 1;
+#X text 224 72 RESPONSE;
+#X obj 294 94 vsl 70 128 0 20 0 0 \$0-gainSet empty empty 0 -9 0 10
+-204786 -1 -1 0 1;
+#X obj 26 229 r \$0-threshSet;
+#X obj 124 230 r \$0-ratioSet;
+#X obj 211 230 r \$0-respSet;
+#X obj 292 230 r \$0-gainSet;
+#X obj 375 230 r \$0-rmsPeakSet;
+#X obj 475 230 r \$0-lookSet;
+#X floatatom 32 249 5 0 0 0 - - -;
+#X floatatom 131 250 5 0 0 0 - - -;
+#X floatatom 218 249 5 0 0 0 - - -;
+#X floatatom 298 250 5 0 0 0 - - -;
+#X floatatom 382 250 5 0 0 0 - - -;
+#X floatatom 482 250 5 0 0 0 - - -;
+#X msg 34 50 -5;
+#X msg 128 50 3;
+#X msg 294 50 0;
+#X msg 214 50 40;
+#X msg 380 50 0;
+#X obj 213 15 loadbang;
+#X obj 273 16 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 292 16 Reset;
+#X connect 12 0 18 0;
+#X connect 13 0 19 0;
+#X connect 14 0 20 0;
+#X connect 15 0 21 0;
+#X connect 16 0 22 0;
+#X connect 17 0 23 0;
+#X connect 24 0 1 0;
+#X connect 25 0 8 0;
+#X connect 26 0 11 0;
+#X connect 27 0 9 0;
+#X connect 28 0 2 0;
+#X connect 29 0 30 0;
+#X connect 30 0 24 0;
+#X connect 30 0 25 0;
+#X connect 30 0 27 0;
+#X connect 30 0 26 0;
+#X connect 30 0 28 0;
+#X restore 339 642 pd CompressorControl;
 #X connect 1 0 125 0;
 #X connect 2 0 12 0;
 #X connect 2 0 25 0;
